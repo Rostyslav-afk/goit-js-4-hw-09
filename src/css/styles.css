@@ -1,0 +1,294 @@
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.contacts {
+    padding-top: 12px;
+    text-align: center;
+}
+
+.contacts-bg {
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid rgba(100, 100, 111, 0.2);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    width: 500px;
+    height: 700px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+}
+
+.contacts-input {
+    margin: 0 auto;
+    margin-top: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 450px;
+    padding-left: 10px;
+    border-radius: 10px;
+    border: 2px solid rgba(100, 100, 111, 0.2);
+    color: rgba(100, 100, 111, 1);
+    font-size: 20px;
+}
+
+.contacts-list {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contacts-item {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 400px;
+    background-color: #fff;
+    border: 2px solid rgba(100, 100, 111, 0.2);
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.contacts-item:hover {
+    transform: scale(1.1);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border: 1px solid rgba(100, 100, 111, 0.2);
+}
+
+.item-box {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.item-img {
+    height: 62px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+.item-title {
+    font-size: 25px;
+    font-family: "Funnel Sans";
+}
+
+.item-text {
+    font-family: "Roboto";
+}
+
+.contacts-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 75px;
+
+    margin-top: auto;
+    padding: 15px;
+
+    background-color: rgba(100, 100, 111, 0.1);
+}
+
+.contacts-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    font-family: "Roboto";
+    transition: all 0.3s;
+}
+
+.contacts-title:hover {
+    transform: scale(1.1);
+}
+
+.contacts-call {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    font-family: "Roboto";
+    transition: all 0.3s;
+}
+
+.contacts-call:hover {
+    transform: scale(1.1);
+}
+
+.contacts-chat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    font-family: "Roboto";
+    transition: all 0.3s;
+}
+
+.contacts-chat:hover {
+    transform: scale(1.1);
+}
+
+.contacts-button {
+    position: absolute;
+    right: 3%;
+    bottom: 17%;
+    background: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+.contacts-button:hover{
+    transform: scale(1.2);
+}
+
+.contacts-button>img {
+    width: 70px;
+}
+
+img {
+    width: 50px;
+}
