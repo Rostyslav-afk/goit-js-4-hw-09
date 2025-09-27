@@ -1,0 +1,12 @@
+{{#each contacts}}
+<li class="contacts-item">
+    <img src="{{photoLink}}" alt="{{name}}" class="item-img">
+    <div class="item-box">
+        <h3 class="item-title">{{name}}</h3>
+        <p class="item-text">{{phoneNumber}}</p>
+        <p class="item-text">{{email}}</p>
+    </div>
+    <button type="button" class="item-button">X</button>
+    <button type="button" class="item-buttonn">Edit</button>
+</li>
+{{/each}}

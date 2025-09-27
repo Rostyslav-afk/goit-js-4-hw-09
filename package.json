@@ -18,6 +18,11 @@
   },
   "homepage": "https://github.com/Rostyslav-afk/goit-js-4-hw-09#readme",
   "devDependencies": {
-    "parcel": "^2.16.0"
+    "parcel": "^2.16.0",
+    "parcel-transformer-hbs": "^1.0.4"
+  },
+  "dependencies": {
+    "@partiellkorrekt/parcel-transformer-handlebars": "^1.0.5",
+    "handlebars": "^4.7.8"
   }
 }
