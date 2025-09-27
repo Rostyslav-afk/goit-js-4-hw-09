@@ -162,7 +162,7 @@ table {
     transition: all 0.3s;
 }
 
-.contacts-input:hover{
+.contacts-input:hover {
     transform: scale(1.05);
 }
 
@@ -220,7 +220,7 @@ table {
     font-family: "Roboto";
 }
 
-.item-button{
+.item-button {
     width: 30px;
     height: 30px;
     margin-left: 30px;
@@ -232,9 +232,18 @@ table {
     font-family: "Roboto";
     border-radius: 50%;
     border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 0 rgba(245, 73, 39, 0);
 }
 
-.item-buttonn{
+.item-button:hover {
+    background-color: #ff6b4a;
+    transform: scale(1.2) translateY(-3px);
+    box-shadow: 0 0 12px rgba(245, 73, 39, 0.7);
+}
+
+.item-buttonn {
     width: 30px;
     height: 30px;
     display: flex;
@@ -245,6 +254,15 @@ table {
     font-family: "Roboto";
     border-radius: 50%;
     border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 0 rgba(28, 105, 168, 0);
+}
+
+.item-buttonn:hover {
+    background-color: #3285d1;
+    transform: scale(1.2) translateY(-3px); 
+    box-shadow: 0 0 12px rgba(28, 105, 168, 0.7);
 }
 
 .contacts-footer {
@@ -313,7 +331,7 @@ table {
     transition: all 0.3s;
 }
 
-.contacts-button:hover{
+.contacts-button:hover {
     transform: scale(1.2);
 }
 
