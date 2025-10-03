@@ -22,16 +22,19 @@ const addContactButton = document.querySelector(".contacts-button");
 
 const renderContact = function () {
   contactsList.innerHTML = template({ contacts });
+
+  
 };
 
 const savedContacts = localStorage.getItem("contacts");
 
 if (savedContacts) {
-  contacts.push(...JSON.parse(savedContacts));
+  contacts.push(...defaultContacts, ...JSON.parse(savedContacts));
 } else {
   contacts.push(...defaultContacts);
-  localStorage.setItem("contacts", JSON.stringify(contacts));
 }
+
+localStorage.setItem("contacts", JSON.stringify(contacts));
 
 renderContact();
 
