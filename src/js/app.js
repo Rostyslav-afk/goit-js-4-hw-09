@@ -12,7 +12,7 @@ const defaultContacts = [
   {
     photoLink: "https://images.stockcake.com/public/3/e/e/3eecfb4e-a7ed-467f-b01d-ab9c473647a0_medium/intense-male-gaze-stockcake.jpg",
     name: "Jay Price",
-    phoneNumber: "+44 110 5791 0234",
+    phoneNumber: "+44 110 0751 1904",
     email: "jayprice@outlook.com",
   },
 ];
@@ -22,19 +22,61 @@ const addContactButton = document.querySelector(".contacts-button");
 
 const renderContact = function () {
   contactsList.innerHTML = template({ contacts });
-
-  
 };
+
+const normalizePhone = phone => phone.replace(/\D/g, "");
+
+const editContacts = function () {
+  const inputRaw = prompt("Write the phone number of the contact you want to edit").trim();
+  const inputPhone = normalizePhone(inputRaw);
+
+  const contact = contacts.find(c => normalizePhone(c.phoneNumber) === inputPhone);
+
+  if (!contact) {
+    alert("Contact not found");
+    return;
+  }
+
+  const whatToEdit = prompt("What do you want to edit? 1 - Photo 2 - Name 3 - Phone 4 - Email").trim();
+
+  switch (whatToEdit) {
+    case "1": {
+      const newPhoto = prompt("Insert new photo link", contact.photoLink);
+      if (newPhoto) contact.photoLink = newPhoto;
+      break;
+    }
+    case "2": {
+      const newName = prompt("Insert new name", contact.name);
+      if (newName) contact.name = newName;
+      break;
+    }
+    case "3": {
+      const newPhone = prompt("Insert new phone number", contact.phoneNumber);
+      if (newPhone) contact.phoneNumber = newPhone;
+      break;
+    }
+    case "4": {
+      const newEmail = prompt("Insert new email", contact.email || "");
+      if (newEmail) contact.email = newEmail;
+      break;
+    }
+    default:
+      alert("Invalid option");
+  }
+
+  localStorage.setItem("contacts", JSON.stringify(contacts));
+  renderContact();
+};
+
 
 const savedContacts = localStorage.getItem("contacts");
 
 if (savedContacts) {
-  contacts.push(...defaultContacts, ...JSON.parse(savedContacts));
+  contacts.push(...JSON.parse(savedContacts));
 } else {
   contacts.push(...defaultContacts);
+  localStorage.setItem("contacts", JSON.stringify(contacts));
 }
-
-localStorage.setItem("contacts", JSON.stringify(contacts));
 
 renderContact();
 
@@ -51,3 +93,7 @@ addContactButton.addEventListener("click", () => {
 
   renderContact();
 });
+
+const editContactButton = document.querySelector(".item-buttonn");
+
+editContactButton.addEventListener("click", editContacts);
