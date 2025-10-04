@@ -68,6 +68,20 @@ const editContacts = function () {
   renderContact();
 };
 
+const deleteContact = function () {
+  const inputtoDelete = prompt("Write the phone number of the contact you want to delete").trim();
+  const clearInput = normalizePhone(inputtoDelete);
+
+  const contactToDelete = contacts.find(c => normalizePhone(c.phoneNumber) === clearInput);
+
+  if (contactToDelete) {
+    contacts.splice(contacts.indexOf(contactToDelete), 1);
+    localStorage.setItem("contacts", JSON.stringify(contacts));
+    renderContact();
+  } else {
+    alert("Contact not found");
+  }
+};
 
 const savedContacts = localStorage.getItem("contacts");
 
@@ -94,6 +108,11 @@ addContactButton.addEventListener("click", () => {
   renderContact();
 });
 
-const editContactButton = document.querySelector(".item-buttonn");
-
-editContactButton.addEventListener("click", editContacts);
+contactsList.addEventListener("click", function (event) {
+  if (event.target.classList.contains("item-buttonn")) {
+    editContacts();
+  }
+  if (event.target.classList.contains("item-button")) {
+    deleteContact();
+  }
+});
